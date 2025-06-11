@@ -28,15 +28,38 @@
             transform: translateY(-1px);
             transition: all 0.3s ease;
         }
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 100;
+            padding: 2rem;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="index.html" class="text-3xl font-black logo">
                 <span class="text-blue-600">E</span>Zakay
             </a>
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
                 <a href="index.html" class="hover:text-blue-600">Home</a>
                 <a href="about.html" class="text-blue-600">About</a>
@@ -46,104 +69,151 @@
                     Get Started
                 </a>
             </nav>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="index.html" class="text-3xl font-black logo">
+                <span class="text-blue-600">E</span>Zakay
+            </a>
+            <button onclick="toggleMobileMenu()">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <nav class="flex flex-row flex-wrap justify-center items-center gap-4 text-base font-medium text-gray-700">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="about.html" class="text-blue-600">About</a>
+            <a href="features.html" class="hover:text-blue-600">Features</a>
+            <a href="contact.html" class="hover:text-blue-600">Contact</a>
+            <a href="get-started.html" class="bg-blue-600 text-white text-base font-semibold px-4 py-2 rounded-md shadow hover:bg-blue-700 transition duration-300 text-center">
+                Get Started
+            </a>
+        </nav>
+    </div>
+
     <!-- About Section -->
-  <section id="about" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 px-6" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto py-20">
-        <!-- Modern Card Design -->
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-            <!-- Header with Accent -->
-            <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-1">
-                <div class="bg-white p-8 rounded-t-2xl">
-                    <h2 class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 text-center mb-4">
-                        About EZakay
-                    </h2>
-                    <p class="text-gray-600 text-center max-w-2xl mx-auto">Revolutionizing public transportation through innovative digital solutions</p>
+    <section id="about" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 px-4 sm:px-6" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto py-12 sm:py-20 w-full">
+            <!-- Modern Card Design -->
+            <div class="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <!-- Header with Accent -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-1">
+                    <div class="bg-white p-6 sm:p-8 rounded-t-xl sm:rounded-t-2xl">
+                        <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 text-center mb-6">
+                            About EZakay
+                        </h2>
+                        <p class="text-xs sm:text-sm md:text-base text-gray-500 text-center max-w-2xl mx-auto">Revolutionizing public transportation through innovative digital solutions</p>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Card Content with Grid Layout -->
-            <div class="p-8 md:p-12">
-                <!-- Main Description -->
-                <div class="grid md:grid-cols-2 gap-12 mb-12">
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-6">
-                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
-                                <i data-lucide="layers" class="w-6 h-6 text-blue-600"></i>
+                
+                <!-- Card Content with Grid Layout -->
+                <div class="p-6 sm:p-8 md:p-12">
+                    <!-- Main Description -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-12">
+                        <!-- Left Column -->
+                        <div class="space-y-6">
+                            <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                                <div class="bg-blue-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                    <i data-lucide="layers" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-800 mb-3">Digital Management System</h3>
+                                    <p class="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed">
+                                        A comprehensive mobile-based platform optimizing modern PUV operations in Tacloban with seamless stakeholder coordination.
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Digital Management System</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    A comprehensive mobile-based platform optimizing modern PUV operations in Tacloban with seamless stakeholder coordination.
-                                </p>
+
+                            <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                                <div class="bg-blue-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                    <i data-lucide="shield-check" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-800 mb-3">Secure Transactions</h3>
+                                    <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                                        Integrated with GCash for cashless payments, ensuring safe and convenient transactions for all users.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-6">
-                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-blue-600"></i>
+                        <!-- Right Column -->
+                        <div class="space-y-6">
+                            <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                                <div class="bg-blue-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                    <i data-lucide="handshake" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-800 mb-3">Strategic Partnerships</h3>
+                                    <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                                        Collaborating with TAVAGCADOTCO and NORBATCO to implement modern transport solutions across the city.
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Secure Transactions</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Integrated with GCash for cashless payments, ensuring safe and convenient transactions for all users.
-                                </p>
+
+                            <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                                <div class="bg-blue-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                    <i data-lucide="settings" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-800 mb-3">Smart Features</h3>
+                                    <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                                        Automated fare computation, discount management via ID verification, and comprehensive analytics for operators.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-6">
-                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
-                                <i data-lucide="handshake" class="w-6 h-6 text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Strategic Partnerships</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Collaborating with TAVAGCADOTCO and NORBATCO to implement modern transport solutions across the city.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-6">
-                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
-                                <i data-lucide="settings" class="w-6 h-6 text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Smart Features</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Automated fare computation, discount management via ID verification, and comprehensive analytics for operators.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Partnership Section -->
-                <div class="border-t border-gray-100 pt-8">
-                    <div class="flex flex-col items-center gap-6">
-                        <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Trusted By Leading Transport Cooperatives</p>
-                        <div class="flex items-center gap-12">
-                            <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-2xl">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
-                                <span class="text-gray-700 font-semibold">TAVAGCADOTCO</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-2xl">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
-                                <span class="text-gray-700 font-semibold">NORBATCO</span>
+                    <!-- Partnership Section -->
+                    <div class="border-t border-gray-100 pt-8">
+                        <div class="flex flex-col items-center gap-6">
+                            <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Trusted By Leading Transport Cooperatives</p>
+                            <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-12">
+                                <div class="flex items-center gap-3 bg-gray-50 px-4 sm:px-6 py-3 rounded-xl sm:rounded-2xl w-full sm:w-auto">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
+                                    <span class="text-sm sm:text-base text-gray-700 font-semibold">TAVAGCADOTCO</span>
+                                </div>
+                                <div class="flex items-center gap-3 bg-gray-50 px-4 sm:px-6 py-3 rounded-xl sm:rounded-2xl w-full sm:w-auto">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
+                                    <span class="text-sm sm:text-base text-gray-700 font-semibold">NORBATCO</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  </section>
+    </section>
+
     <script>
+        // Initialize Lucide icons
         lucide.createIcons();
-        AOS.init({ once: true });
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 </body>
 </html>
