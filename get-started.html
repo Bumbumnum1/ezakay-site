@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started - EZakay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 5.5rem;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .logo:hover {
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-3xl font-black logo">
+                <span class="text-blue-600">E</span>Zakay
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-blue-600">Home</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+                <a href="features.html" class="hover:text-blue-600">Features</a>
+                <a href="contact.html" class="hover:text-blue-600">Contact</a>
+                <a href="get-started.html" class="ml-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-md shadow hover:bg-blue-700 transition duration-300">
+                    <span class="text-white">Get Started</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Call to Action -->
+    <section id="get-started" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center px-6 pt-16" data-aos="zoom-in">
+        <div class="max-w-3xl space-y-8">
+            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                Ready to Modernize Your Commute?
+            </h2>
+            <p class="text-xl md:text-2xl text-blue-100">
+                Be part of the digital transport movement transforming Tacloban City.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+                <a href="download.html" class="inline-block px-8 py-4 bg-white text-blue-700 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all hover:scale-105">
+                    Download
+                </a>
+                <a href="learn_more.html" class="inline-block px-8 py-4 bg-blue-700 text-white font-semibold rounded-full border-2 border-white/20 hover:bg-blue-600 transition-all hover:scale-105">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true });
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features - EZakay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 5.5rem;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .logo:hover {
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-3xl font-black logo">
+                <span class="text-blue-600">E</span>Zakay
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-blue-600">Home</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+                <a href="features.html" class="text-blue-600">Features</a>
+                <a href="contact.html" class="hover:text-blue-600">Contact</a>
+                <a href="get-started.html" class="ml-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-md shadow hover:bg-blue-700 transition duration-300">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+  <section id="features" class="min-h-screen bg-gradient-to-b from-gray-50 to-white px-6 pt-16" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-6">Core Features</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Discover how EZakay is revolutionizing public transportation with our comprehensive suite of features.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Passenger App Card -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Passenger App</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Real-time tracking of modern PUVs via Google Maps</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="id-card" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Verification system for discounts (Student, Senior, PWD)</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="qr-code" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Ride verification with QR code boarding</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="ruler" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Automated fare calculation based on distance</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="file-text" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Ride history tracking and e-receipts</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Driver App Card -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="car" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Driver App</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="users" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Displays booked passengers with destination info</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="navigation" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Real-time driver location sharing via GPS</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="dollar-sign" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Tracks fare payments in real-time</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="list-filter" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Automatically sorts passengers by destination</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="clipboard-list" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Stores boarding and exit logs</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Operator App Card -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="settings" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Admin Dashboard</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Analytics: daily passengers, peak hours, income</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="badge-check" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Driver registration and monitoring tools</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="map" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Route performance overview and fare control</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="lock" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Admin authentication and access control</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="file-output" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Data export for compliance and audits</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true });
+    </script>
+</body>
+</html>

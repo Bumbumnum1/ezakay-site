@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - EZakay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 5.5rem;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .logo:hover {
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-3xl font-black logo">
+                <span class="text-blue-600">E</span>Zakay
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-blue-600">Home</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+                <a href="features.html" class="hover:text-blue-600">Features</a>
+                <a href="contact.html" class="text-blue-600">Contact</a>
+                <a href="get-started.html" class="ml-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-md shadow hover:bg-blue-700 transition duration-300">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white px-6 py-20" data-aos="fade-up">
+        <div class="max-w-5xl w-full">
+            <!-- Contact Content -->
+            <div class="bg-gray-900 backdrop-blur rounded-3xl p-8 md:p-12 shadow-xl">
+                <div class="text-center space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">
+                        Get in Touch
+                    </h2>
+                    <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                        We'd love to hear from you. Whether you're a commuter, driver, or operator — let's work together to build smart mobility.
+                    </p>
+                    
+                    <!-- Contact Information Grid -->
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="space-y-4 p-6 bg-gray-800/50 rounded-2xl">
+                            <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center mx-auto">
+                                <i data-lucide="mail" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl text-white">Email Us</h3>
+                            <a href="mailto:ezakay25@gmail.com" class="text-blue-400 hover:text-blue-300 transition">
+                                info@ezakay.ph
+                            </a>
+                        </div>
+                        
+                        <div class="space-y-4 p-6 bg-gray-800/50 rounded-2xl">
+                            <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center mx-auto">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <h3 class="font-semibold text-xl text-white">Visit Us</h3>
+                            <p class="text-gray-400">EZakay HQ — Tacloban City, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true });
+    </script>
+</body>
+</html>

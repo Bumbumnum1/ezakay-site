@@ -1,0 +1,8 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Styles for Smooth Transitions */
+.transition-opacity {
+    transition: opacity 0.3s ease-in-out;
+}

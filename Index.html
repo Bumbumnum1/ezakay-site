@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EZakay - Modern Transport for Filipinos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 5.5rem; /* Adjusted for better positioning */
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+    /* Add a subtle hover animation */
+    .logo:hover {
+      transform: translateY(-1px);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#home" class="text-3xl font-black logo">
+            <span class="text-blue-600">E</span>Zakay
+        </a>
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+    <a href="index.html" class="hover:text-blue-600">Home</a>
+    <a href="about.html" class="hover:text-blue-600">About</a>
+    <a href="features.html" class="hover:text-blue-600">Features</a>
+    <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    <a href="get-started.html" class="ml-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-md shadow hover:bg-blue-700 transition duration-300">
+        Get Started
+    </a>
+</nav>
+    </div>
+    </header>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-blue-100 text-center px-6 pt-16" data-aos="fade-up">
+    <div class="max-w-3xl space-y-6">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-blue-800 leading-tight">
+        Modernizing Public Utility Vehicle Operations<br>
+        <span class="text-blue-600">Across Tacloban City</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700">
+        EZakay is a role-based smart platform that connects passengers, drivers, and cooperatives through real-time tracking, automated fare, QR verification, and secure digital payment.
+      </p>
+      <a href="#features" class="inline-block px-8 py-4 bg-blue-600 text-white text-lg rounded-full shadow hover:bg-blue-700 transition">Explore Features</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="min-h-screen flex items-center bg-gradient-to-b from-white to-gray-50 px-6 pt-16" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+        <!-- Modern Card Design -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <!-- Header with Accent -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-1">
+                <div class="bg-white p-8 rounded-t-2xl">
+                    <h2 class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 text-center mb-4">
+                        About EZakay
+                    </h2>
+                    <p class="text-gray-600 text-center max-w-2xl mx-auto">Revolutionizing public transportation through innovative digital solutions</p>
+                </div>
+            </div>
+            
+            <!-- Card Content with Grid Layout -->
+            <div class="p-8 md:p-12">
+                <!-- Main Description -->
+                <div class="grid md:grid-cols-2 gap-12 mb-12">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                <i data-lucide="layers" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Digital Management System</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    A comprehensive mobile-based platform optimizing modern PUV operations in Tacloban with seamless stakeholder coordination.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Secure Transactions</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Integrated with GCash for cashless payments, ensuring safe and convenient transactions for all users.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                <i data-lucide="handshake" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Strategic Partnerships</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Collaborating with TAVAGCADOTCO and NORBATCO to implement modern transport solutions across the city.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="bg-blue-50 p-4 rounded-2xl flex-shrink-0 hover:bg-blue-100 transition-colors">
+                                <i data-lucide="settings" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-800 mb-2">Smart Features</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Automated fare computation, discount management via ID verification, and comprehensive analytics for operators.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership Section -->
+                <div class="border-t border-gray-100 pt-8">
+                    <div class="flex flex-col items-center gap-6">
+                        <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Trusted By Leading Transport Cooperatives</p>
+                        <div class="flex items-center gap-12">
+                            <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-2xl">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
+                                <span class="text-gray-700 font-semibold">TAVAGCADOTCO</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-2xl">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
+                                <span class="text-gray-700 font-semibold">NORBATCO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="min-h-screen bg-gradient-to-b from-gray-50 to-white px-6 pt-16" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-6">Core Features</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Discover how EZakay is revolutionizing public transportation with our comprehensive suite of features.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Passenger App Card -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Passenger App</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Real-time tracking of modern PUVs via Google Maps</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="id-card" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Verification system for discounts (Student, Senior, PWD)</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="qr-code" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Ride verification with QR code boarding</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="ruler" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Automated fare calculation based on distance</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="file-text" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Ride history tracking and e-receipts</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Driver App Card -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="car" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Driver App</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="users" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Displays booked passengers with destination info</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="navigation" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Real-time driver location sharing via GPS</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="dollar-sign" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Tracks fare payments in real-time</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="list-filter" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Automatically sorts passengers by destination</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="clipboard-list" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Stores boarding and exit logs</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Operator App Card -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="settings" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Admin Dashboard</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Analytics: daily passengers, peak hours, income</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="badge-check" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Driver registration and monitoring tools</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="map" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Route performance overview and fare control</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="lock" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Admin authentication and access control</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="bg-blue-50 p-2 rounded-xl">
+                            <i data-lucide="file-output" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700">Data export for compliance and audits</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="get-started" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center px-6 pt-16" data-aos="zoom-in">
+    <div class="max-w-3xl space-y-8">
+        <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+            Ready to Modernize Your Commute?
+        </h2>
+        <p class="text-xl md:text-2xl text-blue-100">
+            Be part of the digital transport movement transforming Tacloban City.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+            <a href="download.html" class="inline-block px-8 py-4 bg-white text-blue-700 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all hover:scale-105">
+                Download
+            </a>
+            <a href="learn_more.html" class="inline-block px-8 py-4 bg-blue-700 text-white font-semibold rounded-full border-2 border-white/20 hover:bg-blue-600 transition-all hover:scale-105">
+                Learn More
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="bg-gray-900 text-gray-200 px-6 py-20">
+    <div class="max-w-5xl mx-auto">
+        <!-- Contact Content -->
+        <div class="bg-gray-800/50 backdrop-blur rounded-3xl p-8 md:p-12 shadow-xl">
+            <div class="text-center space-y-8">
+                <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    We'd love to hear from you. Whether you're a commuter, driver, or operator — let's work together to build smart mobility.
+                </p>
+                
+                <!-- Contact Information Grid -->
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="space-y-4 p-6 bg-gray-800/50 rounded-2xl">
+                        <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center mx-auto">
+                            <i data-lucide="mail" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-semibold text-xl">Email Us</h3>
+                        <a href="mailto:ezakay25@gmail.com" class="text-blue-400 hover:text-blue-300 transition">
+                            info@ezakay.ph
+                        </a>
+                    </div>
+                    
+                    <div class="space-y-4 p-6 bg-gray-800/50 rounded-2xl">
+                        <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center mx-auto">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-semibold text-xl">Visit Us</h3>
+                        <p class="text-gray-400">EZakay HQ — Tacloban City, Philippines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025 EZakay. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Init scripts -->
+  <script>
+    lucide.createIcons();
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>
