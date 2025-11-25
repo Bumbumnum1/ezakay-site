@@ -6,6 +6,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'EZakay - Modern Transport for Filipinos',
   description: 'Modernizing Public Utility Vehicle Operations Across Tacloban City',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({
